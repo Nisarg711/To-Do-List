@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+</head>
+<body>
+<link rel="stylesheet" href="style.css">
+<div class="container">
+    <h1>To-Do List</h1>
+    <div class="input"><input type="text" class="info"  placeholder="Enter Task...">
+    <button class="button">Add</button>
+    </div>
+    <div class="tasks"><ul class="list"></ul></div>
+
+    </div>
+    <script>
+         btn=document.querySelector(".button")
+            btn.addEventListener("click",()=>{
+           const input_task=document.querySelector(".info");
+            if(input_task.value.trim()!='')
+            {
+            const task_list=document.querySelector(".list");            // we need to compulsory use const here, so that for each
+                                                                        //unique or newly entered task, new ,li element and other things
+                                                                        //are created
+           const li=document.createElement("li");
+            li.innerHTML=input_task.value;
+            task_list.appendChild(li);
+          const  btn2=document.createElement("button");
+            
+            btn2.innerHTML="COMPLETE";
+            btn2.className="button2";
+            
+            li.appendChild(btn2);
+           btn2.onclick=function(){
+            btn2.innerHTML="COMPLETED";
+           }
+           const delete_button=document.createElement("button");
+           delete_button.className="button2";
+           delete_button.innerHTML="Delete";
+           li.appendChild(delete_button);
+           delete_button.onclick=function(){
+            li.remove();
+           }
+           
+            input_task.value="";
+        }
+
+        })
+    </script>
+</body>
+</html>
