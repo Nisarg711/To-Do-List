@@ -1,0 +1,54 @@
+body{
+    background: url("ToDo3.webp") no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.container{
+    text-align: center;
+    width: 33%;
+    flex-direction: column;
+    display: flex;
+    margin: auto;
+    position: relative;
+    top: 211px;
+    height: 419px;
+    border-radius: 20px;
+    background-color: rgb(227, 190, 211);
+    border: 2px solid black;
+    
+}
+
+h1{
+    text-align: center;
+}
+.button{
+    cursor: pointer;
+}
+.button2{
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 3px;
+    
+}
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    /* margin: auto;       Though fine to use it, but from starting the content starts from center as we keep entering,later
+                            looks similar to what we get at 0 margin, if we want it to start from top i.e. after add bar, we set it to 0 */
+    margin: 0px;        
+    max-height:300px;
+     overflow-y: auto;
+     /* justify-content: center;     it is removed cuz i wanted to add scroll option in task list, and if done, everytime new item is added
+                                        all would realign in center such that top or bottom items gets hidden*/     
+  
+   
+    
+}
+
+
+
+
+
